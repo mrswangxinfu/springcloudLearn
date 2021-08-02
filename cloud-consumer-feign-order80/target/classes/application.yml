@@ -1,0 +1,21 @@
+server:
+  port: 8003
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+# 设置feign客户端超时时间（openfeign默认支持ribbon）
+
+ribbon:
+  # 指建立连接后从服务器读取到可用数据的时间
+  ReadTimeout: 5000
+  # 指客户端建立连接所用的时间，适用于网络状况正常的情况下，两端所用的时间
+  ConnectTimeout: 5000
+
+#  日志级别：NONE--默认的不显示任何日志，BASIC--仅记录请求方法、URL、响应状态码及执行时间，
+#  HEADERS--除了BASIC中的信息外，还有请求和响应的头信息，FULL--除了HEADERS中定义的信息外还有请求和响应的正文和元数据
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    com.atguigu.springcloud.service.IPaymentFeignService: debug

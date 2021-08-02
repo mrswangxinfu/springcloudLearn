@@ -1,0 +1,9 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      # 连接的地址（本次将虚拟机作为服务器，连接虚拟机地址，由虚拟机提供zookeeper服务）
+      connect-string: 192.168.43.135:2181

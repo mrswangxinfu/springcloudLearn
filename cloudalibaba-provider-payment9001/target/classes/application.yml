@@ -1,0 +1,16 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    # 将服务注册到nacos，与Eureka不同的是，Eureka需要自己创建服务注册中心，而Nacos注册中心是官网一个项目，直接下载启动即可使用
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # 配置Nacos地址
+# 暴露服务
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
