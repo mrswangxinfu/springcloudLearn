@@ -43,3 +43,12 @@ SpringCloud Sleuth就是解决此问题。并且兼容zipkin
    * Transaction Coordinator(TC) 事务协调器
    * Transaction Manager(TM) 控制全局事务的边界
    * Resource Manager(RM) 控制分支事务
+   
+   
+- 服务注册中心：Eureka(不可用)、Zookeeper、Consul、Nacos
+- 服务调用1：Ribbon、LoadBalancer
+- 服务调用2：Feign(不可用)、OpenFeign
+- 服务降级：Hystrix(不可用)、Resilience4j、Sentinel
+- 服务网关：Zuul(不可用)、Zuul2(不可用)、Gateway
+- 服务配置：Config(不可用)、Nacos
+- 服务总线：Bus(不可用)、Nacos
